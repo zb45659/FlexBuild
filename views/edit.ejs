@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Edit Workouts Page</h1>
-        <form action="/workouts/<%=index%>?_method=PUT" method="POST">
+        <form action="/workouts/<%=workout.id%>?_method=PUT" method="POST">
 		<!--  NOTE: the form is pre-populated with values for the server-->
 		Type: <input type="text" name="type" value="<%=workout.type%>"/><br/>
 		Time: <input type="number" name="time" value="<%=workout.time%>"/><br/>
