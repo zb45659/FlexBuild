@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <!-- <link rel="stylesheet" href="/css/app.css"> -->
+    </head>
+    <body>
+        <h1>Edit User Page</h1>
+        <form action="/users/<%=index%>?_method=PUT" method="POST">
+		<!--  NOTE: the form is pre-populated with values for the server-->
+		Name: <input type="text" name="name" value="<%=user.name%>"/><br/>
+		Weight: <input type="text" name="weight" value="<%=user.weight%>"/><br/>
+		Age: <input type="text" name="age" value="<%=user.age%>"/><br/>
+		
+		<br/>
+		<input type="submit" name="" value="Submit Changes"/>
+        </form>
+    </body>
+</html>
