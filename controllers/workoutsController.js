@@ -28,7 +28,7 @@ router.get("/:index/edit", function (req, res) {
     "edit.ejs", //render views/edit.ejs
     {
       //pass in an object that contains
-      workout: workouts[req.params.index], //the fruit object
+      workout: workouts[req.params.index],
       index: req.params.index, //... and its index in the array
     }
   );

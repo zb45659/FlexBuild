@@ -1,7 +1,7 @@
 const workouts = [
     {
-        group:'Chest',
-        time: '90',
+        type:'Chest',
+        time: 90,
     },
     
 ]
