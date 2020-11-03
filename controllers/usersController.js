@@ -6,13 +6,24 @@ const Workout = require('../models').Workout;
 
 // GET USERS PROFILE
 router.get("/profile/:id", (req, res) => {
-  User.findByPk(req.params.id, {
-    include : [Workout]
-  }).then((userProfile) => {
-    res.render("users/profile.ejs", {
-      user: userProfile,
+  // IF USER ID FROM TOKEN MATCHES THE REQUESTED ENDPOINT, LET THEM IN
+  if (req.user.id == req.params.id) {
+    User.findByPk(req.params.id, {
+      include: [
+        {
+          model: Workout,
+          attributes: ["id", "type"],
+        },
+      ],
+    }).then((userProfile) => {
+      res.render("users/profile.ejs", {
+        user: userProfile,
+      });
     });
-});
+  } else {
+    // res.json("unauthorized");
+    res.redirect("/");
+  }
 });
 
 // EDIT PROFILE
