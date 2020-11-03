@@ -28,7 +28,16 @@
     <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
       <input type="submit" value="Delete User" />
     </form>
+    <br />
+    <h3>Workouts added by you:</h3>
+    <% for (let i = 0; i < user.Workouts.length; i++){ %>
+            <li>
+               <a href="/workouts/<%=user.Workouts[i].id%>"><%=user.Workouts[i].type%></a>
+            </li>
+            <br>
+    <% } %>
 
+    <br><br>
     <br /><br />
     <a href="/users">View User Homepage</a>
   </body>

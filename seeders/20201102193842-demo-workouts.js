@@ -8,6 +8,7 @@ module.exports = {
         {
           type:'Chest',
           time: 90,
+          userId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
       },

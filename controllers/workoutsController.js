@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const Workout = require("../models").Workout;
+const User = require('../models').User;
 
 router.get("/", (req, res) => {
   Workout.findAll().then((workouts) => {
@@ -23,7 +24,10 @@ router.post("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  Workout.findByPk(req.params.id).then((workout) => {
+  Workout.findByPk(req.params.id, {
+    include : [User]
+  })
+  .then((workout) => {
     res.render("show.ejs", {
       workout: workout,
     });
