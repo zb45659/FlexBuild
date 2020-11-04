@@ -3,6 +3,7 @@ const router = express.Router();
 
 const User = require('../models').User;
 const Workout = require('../models').Workout;
+const Favorite = require('../models').Favorite;
 
 // GET USERS PROFILE
 router.get("/profile/:id", (req, res) => {
@@ -26,7 +27,15 @@ router.get("/profile/:id", (req, res) => {
   }
 });
 
-// EDIT PROFILE
+// GET EDIT PROFILE
+router.get("/profile/:id/userEdit", (req,res) => {
+  User.findByPk(req.params.id).then((foundUser) => {
+    res.render("users/userEdit.ejs", {
+      user: foundUser
+    });
+  });
+});
+// PUT EDIT PROFILE
 router.put("/profile/:id", (req, res) => {
   User.update(req.body, {
     where: {
