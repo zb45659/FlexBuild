@@ -6,7 +6,7 @@ module.exports = {
       'Favorites',
        [
          {
-           userId: 3,
+           userId: 1,
            workoutId: 1,
            createdAt: new Date(),
            updatedAt: new Date(),

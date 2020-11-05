@@ -36,7 +36,7 @@ app.use("/workouts", require("./controllers/workoutsController.js"));
 app.use("/auth", require("./controllers/authController.js"));
 //HOMEPAGE FROM USER CONTROLLER
 app.get('/', (req, res) => {
-    res.render('users/index.ejs')
+    res.render('users/index2.ejs')
   })
 //LOCAL ROUTE
 app.listen(process.env.PORT, () => {

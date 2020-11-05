@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Workout.init({
+    name: DataTypes.STRING,
     type: DataTypes.STRING,
     time: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,

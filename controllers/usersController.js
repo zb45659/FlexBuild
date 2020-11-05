@@ -13,7 +13,7 @@ router.get("/profile/:id", (req, res) => {
       include: [
         {
           model: Workout,
-          attributes: ["id", "type"],
+          attributes: ["id", "name"],
         },
       ],
     }).then((userProfile) => {

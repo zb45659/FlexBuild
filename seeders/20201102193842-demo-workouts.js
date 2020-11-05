@@ -6,9 +6,10 @@ module.exports = {
       'Workouts', 
       [
         {
+          name: 'Chest Muscular Endurance',
           type:'Chest',
           time: 90,
-          userId: 3,
+          userId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
       },

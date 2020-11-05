@@ -27,12 +27,11 @@
     <h3>Workouts added by you:</h3>
     <% for (let i = 0; i < user.Workouts.length; i++){ %>
             <li>
-               <a href="/workouts/<%=user.Workouts[i].id%>"><%=user.Workouts[i].type%></a>
+               <a href="/workouts/<%=user.Workouts[i].id%>"><%=user.Workouts[i].name%></a>
             </li>
             <br>
     <% } %>
-
-    <br><br>
+        <br><br>
     <a href="/">View User Homepage</a>
   </body>
 </html>
