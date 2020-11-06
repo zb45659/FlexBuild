@@ -47,6 +47,5 @@ User Stories:
 
 # FlexBuild Access
 
-[Game Link](https://flexbuild-app.herokuapp.com/)
+[FlexBuild](https://flexbuild-app.herokuapp.com/)
 
-![alt text](browser.jpg)
