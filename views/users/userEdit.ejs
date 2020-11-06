@@ -20,7 +20,7 @@
         <div class="signup__overlay"></div>
       </div>
       <div class="container__child signup__form">
-        <form action="/profile/<%=user.id%>?_method=PUT" method="POST">
+        <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
           <div class="form-group">
             <label for="name">Name</label>
             <input class="form-control" type="text" name="name" id="name" value="<%=user.name%>" required />

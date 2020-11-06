@@ -62,7 +62,7 @@ router.delete("/:id", (req, res) => {
         id: req.params.id,
     },
 }).then(() => {
-    res.redirect('/users');
+    res.redirect('/');
 });
 });
 
