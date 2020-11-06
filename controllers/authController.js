@@ -7,7 +7,7 @@ require('dotenv').config()
 const jwt = require('jsonwebtoken');
 
 const User = require('../models').User;
-
+const Workout = require('../models').Workout;
 
 // GET SIGNUP FORM
 router.get("/signup", (req, res) => {

@@ -6,7 +6,8 @@
   </head>
 
   <body>
-    <h1>Welcome <%=user.name%></h1>
+    <h1><%=user.name%>'s FlexBody Profile:</h1>
+    <div class = "profile">
     <br />
       Name: <input type="text" name="name" value="<%=user.name%>" /><br />
       <br />
@@ -24,15 +25,35 @@
     <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
       <input type="submit" value="Delete User" />
     </form>
+    </div>
     <br />
-    <h3>Workouts added by you:</h3>
-    <% for (let i = 0; i < user.Workouts.length; i++){ %>
-            <li>
-               <a href="/workouts/<%=user.Workouts[i].id%>"><%=user.Workouts[i].name%></a>
-            </li>
-            <br>
-    <% } %>
+    <ul class="workout">
+      <h3>Workouts you added:</h3>
+      <% for(let i=0; i<user.Workouts.length; i++) { %>
+        <br /><br />
+          <li class="workout1">
+              <a class="workout2" href="/workouts/<%=user.Workouts[i].id%>"> <%=user.Workouts[i].name%> </a>
+          </br>
+          Type: <%=user.Workouts[i].type%>
+          </br>
+          Time: <%=user.Workouts[i].time%> min.
+          </br></br>
+          <div class="multi-button">
+          <!-- Add edit link here  -->
+          <a href="/workouts/<%=user.Workouts[i].id%>/edit"><button>Edit</button></a>
+          
+          <!--  ADD DELETE FORM HERE-->
+          <form action="/workouts/<%=user.Workouts[i].id%>?_method=DELETE" method="POST" id="delete">
+          </form>
+          <button type="submit" form="delete" value="DELETE">Delete</button>
+          </div>
+      </li>
+      <% } %>
+  </ul>
         <br><br>
-    <a href="/">View User Homepage</a>
+        <div class="multi-button home">
+          <a href="/"><button >Back to HomePage</button> </a>
+          </div>
+      
   </body>
 </html>

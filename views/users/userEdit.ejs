@@ -2,28 +2,56 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/css/app.css">
+    <title></title>
+    <link rel="stylesheet" href="/css/app.css" />
   </head>
 
   <body>
-    <h1>Edit your info!</h1>
-    <form action="/profile/<%=user.id%>?_method=PUT" method="POST">
-      Name: <input type="text" name="name" value="<%=user.name%>" /><br />
-      <br />
-      Username:
-      <input type="text" name="username" value="<%=user.username%>" />
-      <br />
-      <br />
-      Password:
-      <input type="text" name="password" value="<%=user.password%>" /><br />
-      <br />
-      Weight:
-      <input type="number" name="weight" value="<%=user.weight%>" /><br />
-      <br />
-      Age:
-      <input type="number" name="age" value="<%=user.age%>" /><br />
-      <br />
-      <input type="submit" value="Edit Profile" />
-    </form>
+    
+    <div class="signup__container">
+      <div class="container__child signup__thumbnail">
+        <div class="thumbnail__logo">
+          <svg class="logo__shape" width="25px" viewBox="0 0 634 479" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="thumbnail__content text-center">
+          <h1 class="heading--primary">User Edit Page.</h1>
+          <h2 class="heading--secondary">Here you have the ability to change your profile information.</h2>
+        </div>
+        <div class="signup__overlay"></div>
+      </div>
+      <div class="container__child signup__form">
+        <form action="/profile/<%=user.id%>?_method=PUT" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name" id="name" value="<%=user.name%>" required />
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" type="text" name="username" id="username" value="<%=user.username%>" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" value="<%=user.password%>" required />
+          </div>
+          <div class="form-group">
+            <label for="weight">Weight</label>
+            <input class="form-control" type="text" name="weight" id="weight" value="<%=user.weight%>" required />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input class="form-control" type="text" name="age" id="age" value="<%=user.age%>" required />
+          </div>
+          <div class="m-t-lg">
+            <ul class="list-inline">
+              <li>
+                <input class="btn btn--form" type="submit" value="Edit Profile" />
+              </li>
+            </ul>
+          </div>
+          </form>
+      </div>
+    </div>
+  
   </body>
 </html>

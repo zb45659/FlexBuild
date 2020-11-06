@@ -6,20 +6,21 @@
         <link rel="stylesheet" href="/css/app2.css">
     </head>
     <body>
-        <h1>Users index page</h1>
-        <ul>
+        <h1>FlexBody Community</h1>
+        <ul class="workout">
             <% for(let i=0; i<users.length; i++) { %>
-                  <li>
-                  Name: <%=users[i].name%> 
-                  </br>
-                  Age: <%=users[i].age%>
-                </br>    
+                  <li class="workout1">
+                        </br>
+                        Name: <%=users[i].name%> 
+                        </br></br>
+                        Age: <%=users[i].age%>
+                        </br></br>
+                        Weight: <%=users[i].weight%>   
                 </li>
                 <% } %>
             </ul>
-            <nav>
-                <br><br>
-                <a href="/">View User Homepage</a>
-            </nav>
+            <div class="multi-button home">
+                <a href="/"><button >Back to HomePage</button> </a>
+            </div>
         </body>
 </html>

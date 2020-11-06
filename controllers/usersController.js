@@ -3,7 +3,7 @@ const router = express.Router();
 
 const User = require('../models').User;
 const Workout = require('../models').Workout;
-const Favorite = require('../models').Favorite;
+
 
 // GET USERS PROFILE
 router.get("/profile/:id", (req, res) => {
@@ -13,7 +13,6 @@ router.get("/profile/:id", (req, res) => {
       include: [
         {
           model: Workout,
-          attributes: ["id", "name"],
         },
       ],
     }).then((userProfile) => {
@@ -48,7 +47,7 @@ router.get("/profile/:id/userEdit", (req,res) => {
 router.put("/profile/:id", (req, res) => {
   User.update(req.body, {
     where: {
-        id: req.body.id,
+        id: req.params.id
     },
     returning: true,
 }).then((updatedUser) => {

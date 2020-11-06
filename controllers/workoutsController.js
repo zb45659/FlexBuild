@@ -3,7 +3,7 @@ const router = express.Router();
 
 const User = require('../models').User;
 const Workout = require('../models').Workout;
-const Favorite = require('../models').Favorite;
+
 
 router.get("/", (req, res) => {
   Workout.findAll().then((workouts) => {

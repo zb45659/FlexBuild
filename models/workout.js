@@ -11,11 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Workout.belongsTo(models.User, { foreignKey: "userId" });
-      Workout.belongsToMany(models.User, {
-        through: "Favorite",
-        foreignKey: "workoutId",
-        otherKey: "userId",
-      });
     }
   };
   Workout.init({

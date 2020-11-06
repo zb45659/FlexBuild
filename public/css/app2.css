@@ -24,32 +24,36 @@ font-size: 75px;
 font-weight: 300; 
 line-height: 50px; 
 letter-spacing: 1px; 
-padding: 0 0 40px; 
+padding: 0 0 40px;
 border-bottom: double #c9d0d4;
 align-content: center;
 }
 .workout {
  position: absolute; 
  left: 35%;
- width: 80%;
+ width: 60%;
  margin: 0 auto;
+ padding: 0 auto;
  font-size: 0;
+ display: flex;
+ flex-wrap: wrap;
 } 
 
 .workout1 {
-  display: inline-block;
+  display: inline;
   width: 200px;
   height: 200px;
   color: rgb(30, 77, 138);
   font-family: 'Verdana', sans-serif; 
   font-size: 16px; 
   line-height: 26px;  
-  margin: 0 1rem 0 1rem;
+  margin: 1.2rem;
   border-style: double; 
   border-color: rgb(30, 77, 138);
   border-width: 5px;
   background: rgba(236, 240, 241, 0.6)
 }
+
 :root {
   --border-size: 0.125rem;
   --duration: 250ms;
