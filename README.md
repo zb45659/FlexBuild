@@ -7,6 +7,7 @@
 - Two Models were developed, a User model, and a Workout model. Both models incorporate all 7 RESTful routes with full CRUD.
 - The models User and Workout are associated by Users having zero to many workouts and Workouts belonging to a User. 
 - FlexBody is deployed online and accessible to the public via Heroku
+User Stories:
 1. Should be able to GET new User
 2. Should be able to GET show pre-existing User
 3. Should be able to GET index of Users
