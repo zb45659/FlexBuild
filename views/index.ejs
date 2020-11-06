@@ -7,24 +7,30 @@
     </head>
     <body>
         <h1>Workouts index page</h1>
-        <ul>
+        <ul class="workout">
             <% for(let i=0; i<workouts.length; i++) { %>
-                <li>
-                    <a href="/workouts/<%=workouts[i].id%>"> <%=workouts[i].name%> </a>
-
-                    <!-- Add edit link here  -->
-                    <a href="/workouts/<%=workouts[i].id%>/edit">Edit</a>
-                    <!--  ADD DELETE FORM HERE-->
-                    <form action="/workouts/<%=workouts[i].id%>?_method=DELETE" method="POST">
-                            <input type="submit" value="DELETE"/>
-                    </form>
-                </li>
-                <% } %>
-            </ul>
-            <nav>
-                <a href="/workouts/new">Create New Workout</a>
-                <br><br>
-                <a href="/">View User Homepage</a>
-            </nav>
+                <li class="workout1">
+                    <a class="workout2" href="/workouts/<%=workouts[i].id%>"> <%=workouts[i].name%> </a>
+                </br>
+                Type: <%=workouts[i].type%>
+                </br>
+                Time: <%=workouts[i].time%> min.
+                </br></br>
+                <div class="multi-button">
+                <!-- Add edit link here  -->
+                <a href="/workouts/<%=workouts[i].id%>/edit"><button>Edit</button></a>
+                
+                <!--  ADD DELETE FORM HERE-->
+                <form action="/workouts/<%=workouts[i].id%>?_method=DELETE" method="POST" id="delete">
+                </form>
+                <button type="submit" form="delete" value="DELETE">Delete</button>
+                </div>
+            </li>
+            <% } %>
+        </ul>
+            <div class="multi-button home">
+            <a href="/"><button >Back to HomePage</button> </a>
+            </div>
+        
         </body>
 </html>
