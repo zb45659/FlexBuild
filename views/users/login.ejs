@@ -7,14 +7,38 @@
   </head>
 
   <body>
-    <h1>Login</h1>
-
-    <form action="/auth/login" method="POST">
-      Username: <input type="text" name="username" /> <br />
-      <br />
-      Password: <input type="text" name="password" /><br />
-      <br />
-      <input type="submit" value="Login" />
-    </form>
+    
+    <div class="signup__container">
+      <div class="container__child signup__thumbnail">
+        <div class="thumbnail__logo">
+          <svg class="logo__shape" width="25px" viewBox="0 0 634 479" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="thumbnail__content text-center">
+          <h1 class="heading--primary">Welcome back to FlexBody!</h1>
+          <h2 class="heading--secondary">Already a member? Use your login information to sign in or go to our sign up form to become a member.</h2>
+        </div>
+        <div class="signup__overlay"></div>
+      </div>
+      <div class="container__child signup__form">
+        <form action="/auth/login" method="POST">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" type="text" name="username" id="username" placeholder="james.bond" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" placeholder="********" required />
+          </div>
+          <div class="m-t-lg">
+            <ul class="list-inline">
+              <li>
+                <input class="btn btn--form" type="submit" value="Log In" />
+              </li>
+            </ul>
+          </div>
+          </form>
+      </div>
+    </div>
+  
   </body>
 </html>

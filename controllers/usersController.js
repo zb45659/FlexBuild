@@ -27,6 +27,15 @@ router.get("/profile/:id", (req, res) => {
   }
 });
 
+//GET USERS INDEX PAGE
+router.get("/", (req, res) => {
+  User.findAll().then((users) => {
+    res.render("users/userIndex.ejs", {
+      users: users,
+    });
+  });
+});
+
 // GET EDIT PROFILE
 router.get("/profile/:id/userEdit", (req,res) => {
   User.findByPk(req.params.id).then((foundUser) => {

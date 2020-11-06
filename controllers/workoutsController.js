@@ -52,7 +52,7 @@ router.put("/:id", (req, res) => {
   });
 });
 
-router.delete("/:index", (req, res) => {
+router.delete("/:id", (req, res) => {
   Workout.destroy({ where: { id: req.params.id } }).then(() => {
     res.redirect("/workouts");
   });

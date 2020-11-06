@@ -1,0 +1,18 @@
+html {
+    height: 100%;
+    width: 100%;
+    resize: both;
+    overflow: hidden;
+  }
+
+body {
+    background-image: url('https://png.pngtree.com/58pic/33/41/41/09d58PICeYI8Gc58pK0vR_PIC2018.jpg');
+    /* background-color: red; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    width: 100vw;
+    height: 100vh;
+    overflow:auto;
+  }

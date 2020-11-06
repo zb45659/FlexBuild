@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+    width: 100%;
+    resize: both;
+    overflow: hidden;
+  }
+
+body {
+    background-image: url('https://media.istockphoto.com/photos/gym-background-with-dumbbell-on-dark-floor-picture-id947343978?k=6&m=947343978&s=170667a&w=0&h=eJc4HGXvT5F5qhcBn1zonNB1AC3yFSu3SNBjzjzO6Ss=');
+    /* background-color: red; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    width: 100vw;
+    height: 100vh;
+    overflow:auto;
+  }
+

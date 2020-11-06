@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/css/app2.css">
+    </head>
+    <body>
+        <h1>Users index page</h1>
+        <ul>
+            <% for(let i=0; i<users.length; i++) { %>
+                  <li>
+                  Name: <%=users[i].name%> 
+                  </br>
+                  Age: <%=users[i].age%>
+                </br>    
+                </li>
+                <% } %>
+            </ul>
+            <nav>
+                <br><br>
+                <a href="/">View User Homepage</a>
+            </nav>
+        </body>
+</html>

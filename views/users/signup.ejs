@@ -7,20 +7,51 @@
   </head>
 
   <body>
-    <h1>Sign Up</h1>
-
-    <form action="/auth" method="POST">
-      Name: <input type="text" name="name" /><br />
-      <br />
-      Username: <input type="text" name="username" /> <br />
-      <br />
-      Password: <input type="text" name="password" /><br />
-      <br />
-      Weight: <input type="number" name="weight" /><br />
-      <br />
-      Age: <input type="number" name="age" /><br />
-      <br />
-      <input type="submit" value="SignUp" />
-    </form>
+    
+    <div class="signup__container">
+      <div class="container__child signup__thumbnail">
+        <div class="thumbnail__logo">
+          <svg class="logo__shape" width="25px" viewBox="0 0 634 479" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="thumbnail__content text-center">
+          <h1 class="heading--primary">Welcome to FlexBody!</h1>
+          <h2 class="heading--secondary">Are you ready to start your journey?</h2>
+        </div>
+        <div class="signup__overlay"></div>
+      </div>
+      <div class="container__child signup__form">
+        <form action="/auth" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" name="name" id="name" placeholder="James Bond" required />
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" type="text" name="username" id="username" placeholder="james.bond" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" placeholder="********" required />
+          </div>
+          <div class="form-group">
+            <label for="weight">Weight</label>
+            <input class="form-control" type="text" name="weight" id="weight" placeholder="200" required />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input class="form-control" type="text" name="age" id="age" placeholder="42" required />
+          </div>
+          <div class="m-t-lg">
+            <ul class="list-inline">
+              <li>
+                <input class="btn btn--form" type="submit" value="Sign Up" />
+              </li>
+            </ul>
+          </div>
+          </form>
+      </div>
+    </div>
+  
   </body>
 </html>
